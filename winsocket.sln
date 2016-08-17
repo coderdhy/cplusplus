@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wintest", "wintest\wintest.vcxproj", "{8D314B1A-1197-4B23-A8FA-0022729AF645}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "socketserver", "socketserver\socketserver.vcxproj", "{42C8EE12-56D7-43CC-A66F-3C881782B48B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "socketclient", "socketclient\socketclient.vcxproj", "{7F9BCC3F-1E99-44CE-9E89-162ECA622198}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "socketdll", "socketdll\socketdll.vcxproj", "{E3A1A415-7C71-4C28-9E8E-6B47ABDC1867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Header", "Header", "{8712EAAA-F03C-4CE3-B3E8-D72FDDB6E40B}"
+	ProjectSection(SolutionItems) = preProject
+		ObServerModel.h = ObServerModel.h
+		SerializeMemory.h = SerializeMemory.h
+		Serializer.h = Serializer.h
+		Header\SimpleLog.h = Header\SimpleLog.h
+		SingletonModel.h = SingletonModel.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wtl", "wtl", "{63B23660-F38F-4A64-BBC6-183CFF55F3CE}"
+	ProjectSection(SolutionItems) = preProject
+		Header\wtl\atlapp.h = Header\wtl\atlapp.h
+		Header\wtl\atlcrack.h = Header\wtl\atlcrack.h
+		Header\wtl\atlctrls.h = Header\wtl\atlctrls.h
+		Header\wtl\atlctrlw.h = Header\wtl\atlctrlw.h
+		Header\wtl\atlctrlx.h = Header\wtl\atlctrlx.h
+		Header\wtl\atlddx.h = Header\wtl\atlddx.h
+		Header\wtl\atldlgs.h = Header\wtl\atldlgs.h
+		Header\wtl\atldwm.h = Header\wtl\atldwm.h
+		Header\wtl\atlfind.h = Header\wtl\atlfind.h
+		Header\wtl\atlframe.h = Header\wtl\atlframe.h
+		Header\wtl\atlgdi.h = Header\wtl\atlgdi.h
+		Header\wtl\atlmisc.h = Header\wtl\atlmisc.h
+		Header\wtl\atlprint.h = Header\wtl\atlprint.h
+		Header\wtl\atlres.h = Header\wtl\atlres.h
+		Header\wtl\atlresce.h = Header\wtl\atlresce.h
+		Header\wtl\atlribbon.h = Header\wtl\atlribbon.h
+		Header\wtl\atlscrl.h = Header\wtl\atlscrl.h
+		Header\wtl\atlsplit.h = Header\wtl\atlsplit.h
+		Header\wtl\atltheme.h = Header\wtl\atltheme.h
+		Header\wtl\atluser.h = Header\wtl\atluser.h
+		Header\wtl\atlwince.h = Header\wtl\atlwince.h
+		Header\wtl\atlwinx.h = Header\wtl\atlwinx.h
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D314B1A-1197-4B23-A8FA-0022729AF645}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8D314B1A-1197-4B23-A8FA-0022729AF645}.Debug|Win32.Build.0 = Debug|Win32
+		{8D314B1A-1197-4B23-A8FA-0022729AF645}.Release|Win32.ActiveCfg = Release|Win32
+		{8D314B1A-1197-4B23-A8FA-0022729AF645}.Release|Win32.Build.0 = Release|Win32
+		{42C8EE12-56D7-43CC-A66F-3C881782B48B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{42C8EE12-56D7-43CC-A66F-3C881782B48B}.Debug|Win32.Build.0 = Debug|Win32
+		{42C8EE12-56D7-43CC-A66F-3C881782B48B}.Release|Win32.ActiveCfg = Release|Win32
+		{42C8EE12-56D7-43CC-A66F-3C881782B48B}.Release|Win32.Build.0 = Release|Win32
+		{7F9BCC3F-1E99-44CE-9E89-162ECA622198}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7F9BCC3F-1E99-44CE-9E89-162ECA622198}.Debug|Win32.Build.0 = Debug|Win32
+		{7F9BCC3F-1E99-44CE-9E89-162ECA622198}.Release|Win32.ActiveCfg = Release|Win32
+		{7F9BCC3F-1E99-44CE-9E89-162ECA622198}.Release|Win32.Build.0 = Release|Win32
+		{E3A1A415-7C71-4C28-9E8E-6B47ABDC1867}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E3A1A415-7C71-4C28-9E8E-6B47ABDC1867}.Debug|Win32.Build.0 = Debug|Win32
+		{E3A1A415-7C71-4C28-9E8E-6B47ABDC1867}.Release|Win32.ActiveCfg = Release|Win32
+		{E3A1A415-7C71-4C28-9E8E-6B47ABDC1867}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63B23660-F38F-4A64-BBC6-183CFF55F3CE} = {8712EAAA-F03C-4CE3-B3E8-D72FDDB6E40B}
+	EndGlobalSection
+EndGlobal
