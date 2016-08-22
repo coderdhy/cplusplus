@@ -2,7 +2,7 @@
 #include <thread>
 #include <mutex>
 #include <winsock2.h>
-#include "..\ObServerModel.h"
+#include "..\Header\ObServerModel.h"
 using namespace dhymodel;
 
 class CSimpleSocketClient : public CNotifyerModel
