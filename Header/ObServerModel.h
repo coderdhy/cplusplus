@@ -1,6 +1,9 @@
 #ifndef __OBSERVER_MODEL_H__
 #define __OBSERVER_MODEL_H__
 
+#include <memory>
+#include <vector>
+
 #define THREAD_SAFE_MODEL
 namespace dhymodel
 {
@@ -10,7 +13,7 @@ namespace dhymodel
 		virtual ~CObServer() {};
 		//need quick response, otherwise this is a terrible way
 		//nMsg is identity of pData
-		void OnNotify(int nMsg, void *pData) = 0;
+		void OnNotify(int nMsg, void *pData){};
 
 	protected:
 		CObServer() {};
@@ -29,7 +32,7 @@ namespace dhymodel
 			m_vObServer.clear();
 		};
 
-		void AttachObServer(CObServerPtr& spObServer)
+		void Attach(CObServerPtr& spObServer)
 		{
 #ifdef THREAD_SAFE_MODEL
 			std::lock_guard<std::mutex> guard(m_mutex);
@@ -38,19 +41,14 @@ namespace dhymodel
 			m_vObServer.push_back(spObServer_w);
 		}
 
-		void Notify(int nMsg, void* pData);
+		void Notify(int nMsg, void* pData)
 		{
 #ifdef THREAD_SAFE_MODEL
 			std::lock_guard<std::mutex> guard(m_mutex);
 #endif // THREAD_SAFE_MODEL
 			for (ObServers_W::iterator iter = m_vObServer.begin(); iter != m_vObServer.end(); )
 			{
-				if (*iter->expired())
-				{
-					m_vObServer.erase(iter);
-					continue;
-				}
-				CObServerPtr sp = *iter->lock();
+				CObServerPtr sp = (*iter).lock();
 				if (!sp)
 				{
 					m_vObServer.erase(iter);
@@ -63,7 +61,6 @@ namespace dhymodel
 
 	private:
 		ObServers_W m_vObServer;
-
 #ifdef THREAD_SAFE_MODEL
 		std::mutex m_mutex;
 #endif
